@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단소개</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap');
+        h1{
+            text-align: center;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        #main{
+            border: 30px ridge wheat;
+            float:left;
+            margin-left: 20px;
+        }
+        #main_text{
+            margin-left: 550px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        #main_text > span{
+            font-size: 40px;
+            font-family: 'Noto Serif KR', serif;
+        }
+        #mvp{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        a{
+            text-decoration: none;
+        }
+        a > span{
+            font-size: 40px;
+            font-family: 'Noto Serif KR', serif;
+        }
+        #rotate{
+            float:right;
+        }
+        img.infinite_rotationg_logo{
+            animation: rotate_image 10s linear infinite;
+            transform-origin: 50% 50%;
+        }
+        #second{
+            margin-top: 50px;
+        }
+        @keyframes rotate_image{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h1>간단 소개</h1>
+    <hr>
+
+    <div>
+        <img id="main" src="media/칸.png" width="25%">
+        <div id="main_text">
+            <span>◑LCK에서 가장 나이가 많은 선수이다.</span><br><br>
+            <span>◑원래 은퇴할려고 했으나 올해 DK에 입단하게 되었다.</span><br><br>
+            <span>◑3번이나 국제대회에 우승한 경험이 있는 팀에 들어갔지만
+                 자신은 국제대회 우승 경험이 없다.(그만큼 실력은 있다는 의미)</span><br><br>
+            
+            <span>◑스스로 자신을 관종이라고 말할 정도로 좋게 말하면 유쾌하고
+                나쁘게 말하면 소란스러운 스타일
+            </span><br><br>
+
+            <a href="https://namu.wiki/w/%EA%B9%80%EB%8F%99%ED%95%98(%ED%94%84%EB%A1%9C%EA%B2%8C%EC%9D%B4%EB%A8%B8)/%EB%85%BC%EB%9E%80%20%EB%B0%8F%20%EC%82%AC%EA%B1%B4%EC%82%AC%EA%B3%A0">
+                <span>◑논란 및 사건사고 수가 압도적으로 많다.
+                    실력으로 커버치기에도 논란이 너무 많다.
+                </span>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div id="second">
+        <div class="logo-area">
+            <a href="final.html">
+                <img id="rotate" src="media/칸 얼굴.png" width="150px"class="infinite_rotationg_logo">
+            </a>
+        </div>
+        <div id="mvp">
+            <img id="mainImage" src="media/칸mvp.jpg" width="80%">
+        </div>
+    </div>
+    <hr>
+    <script>
+        var files = ["media/칸 킹.png",
+                    "media/칸 헐크.png",
+                    "media/칸mvp.jpg"];
+        var myImage=document.getElementById("mainImage");
+        var imageIndex=0;
+
+        function changeImage(){
+            myImage.setAttribute("src",files[imageIndex]);
+            imageIndex++;
+            if(imageIndex>=files.length){
+                imageIndex=0;
+            }
+        }
+        setInterval(changeImage, 5000);
+    </script>
+</body>
+</html>
