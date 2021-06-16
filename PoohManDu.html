@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단소개</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap');
+        h1{
+            text-align: center;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        #main{
+            border: 30px ridge wheat;
+            float:left;
+            margin-left: 20px;
+        }
+        #main_text{
+            margin-left: 550px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        #main_text > span{
+            font-size: 40px;
+            font-family: 'Noto Serif KR', serif;
+        }
+        #mvp{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        a{
+            text-decoration: none;
+        }
+        a > span{
+            font-size: 40px;
+            font-family: 'Noto Serif KR', serif;
+        }
+        #rotate{
+            float:right;
+        }
+        img.infinite_rotationg_logo{
+            animation: rotate_image 10s linear infinite;
+            transform-origin: 50% 50%;
+        }
+        #second{
+            margin-top: 50px;
+        }
+        @keyframes rotate_image{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h1>간단 소개</h1>
+    <hr>
+
+    <div>
+        <img id="main" src="media/푸만두.png" width="25%">
+        <div id="main_text">
+            <span>◑前 리그 오브 레전드 프로게이머, 現 DWG KIA 코치.
+            </span><br><br>
+            <span>◑군대에서 제대하자마자 GSG라는 클랜에 들어가
+                롤챔스 데뷔전을 치른 후 NLB에서 우승하고 다음시즌에
+                SKT에 입단해 서포터로 데뷔했다.
+            </span><br><br>
+
+            <span>
+                ◑입단한 해에 롤챔스 우승, Worlds 우승, 올해의 서포터 상 등을
+                수상하면서 프로게이머로서 찍을 수 있는 정점을 찍고 바로
+                이듬해에 부진에 빠지면서 코치로 전향하게 된다.
+            </span><br><br>
+
+            <span>◑김정균 감독을 따라 2020시즌에는 Vici Gaming에서, 
+                2021 시즌에는 DWG KIA에서 코치로 활동하게 되었다.
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div id="second">
+        <div class="logo-area">
+            <a href="index.html">
+                <img id="rotate" src="media/담원기아로고.jpg" width="150px"class="infinite_rotationg_logo">
+            </a>
+        </div>
+        <div id="mvp">
+            <img id="mainImage" src="media/푸만두.jpg" width="80%">
+        </div>
+    </div>
+    <hr>
+
+</body>
+</html>

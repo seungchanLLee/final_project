@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단소개</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap');
+        h1{
+            text-align: center;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        #main{
+            border: 30px ridge wheat;
+            float:left;
+            margin-left: 20px;
+        }
+        #main_text{
+            margin-left: 550px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        #main_text > span{
+            font-size: 40px;
+            font-family: 'Noto Serif KR', serif;
+        }
+        #mvp{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        a{
+            text-decoration: none;
+        }
+        a > span{
+            font-size: 40px;
+            font-family: 'Noto Serif KR', serif;
+        }
+        #rotate{
+            float:right;
+        }
+        img.infinite_rotationg_logo{
+            animation: rotate_image 10s linear infinite;
+            transform-origin: 50% 50%;
+        }
+        #second{
+            margin-top: 50px;
+        }
+        @keyframes rotate_image{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h1>간단 소개</h1>
+    <hr>
+
+    <div>
+        <img id="main" src="media/고스트.png" width="25%">
+        <div id="main_text">
+            <span>◑작년에 팀을 못구하고 있다가 시즌 도중에 DK에 영입되었다. </span><br><br>
+            <span>◑오더가 가능한 고스트의 장점 덕분에 DK의 고질적 약점인 운영, 
+                중후반 뇌정지 문제들이 해결되었다.
+            </span><br><br>
+            
+            <span>◑강등된 팀에 있던 커리어 초창기에 승률을 하도 까먹어서
+                 압도적인 기세로 Lck에서 우승하고 Worlds까지 우승했을 때 까지도 통산
+                 승률이 50%를 못 넘겼다.
+            </span><br><br>
+            <span>◑이번 시즌은 바텀 라인전의 승패가 정말 중요한 메타인데
+                지원형 원딜을 잘 다루는 장점이 효과가 없어 최근 부진하고 있다.
+            </span><br><br>
+            <span>
+                ◑ 2021 MSI에서 가장 많은 듀오데스를 했을 정도로 부진한 모습이다.
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div id="second">
+        <div class="logo-area">
+            <a href="index.html">
+                <img id="rotate" src="media/고스트 얼굴.png" width="150px"class="infinite_rotationg_logo">
+            </a>
+        </div>
+        <div id="mvp">
+            <img id="mainImage" src="media/고스트 영입.png" width="80%">
+        </div>
+    </div>
+    <hr>
+
+    <script>
+        var files = ["media/로봇고스트.png",
+                    "media/고스트 영입.png"];
+        var myImage=document.getElementById("mainImage");
+        var imageIndex=0;
+
+        function changeImage(){
+            myImage.setAttribute("src",files[imageIndex]);
+            imageIndex++;
+            if(imageIndex>=files.length){
+                imageIndex=0;
+            }
+        }
+        setInterval(changeImage, 5000);
+    </script>
+</body>
+</html>
